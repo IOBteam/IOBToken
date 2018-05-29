@@ -98,8 +98,8 @@ contract HumanStandardToken is StandardToken {
         uint8 _decimalUnits,
         string _tokenSymbol
         ) public {
-        balances[msg.sender] = _initialAmount;               // Initial Amount = 1,000,000,000
-        totalSupply = _initialAmount;                        // Total supply = 1,000,000,000
+        balances[msg.sender] = _initialAmount;               // Initial Amount = 1,000,000,000 * (10 ** uint256(decimals))
+        totalSupply = _initialAmount;                        // Total supply = 1,000,000,000 * (10 ** uint256(decimals))
         name = _tokenName;                                   // Set the name to "IOB Token"
         decimals = _decimalUnits;                            // Amount of decimals for display purposes，set to 18
         symbol = _tokenSymbol;                               // Set the symbol for display purposes,set to "IOB"
