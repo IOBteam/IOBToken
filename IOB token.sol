@@ -105,9 +105,4 @@ contract HumanStandardToken is StandardToken {
         symbol = _tokenSymbol;                               // Set the symbol for display purposes,set to "IOB"
     }
 
-    /* Approves and then calls the receiving contract */
-    function approveAndCall(address _spender, uint256 _value/*, bytes _extraData*/) public returns (bool success) {
-        return approve(_spender, _value);
-
-    }
 }
